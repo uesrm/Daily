@@ -26,10 +26,23 @@ def down_load(file_name):
     time.sleep(T)
     print(f'random time: {T} s\ndownload {file_name} completed')
 
-down_load('从头到尾学摄影.avi')
 
-# TODO learn collections
-import collections
 
-dir(collections)
+# TODO learn collections : solved
+# TODO learn itertools : unsolved
+
+from collections import namedtuple
+
+import hashlib 
+
+def main():
+    
+    down_load('从头到尾学摄影.avi')
+    
+    Card = namedtuple('Card', ('suite', 'face'))
+    card1 = Card('红桃', '5')
+
+    print(hashlib.md5('nsjfugfntbtghg'.encode()).hexdigest())
+
+
 
